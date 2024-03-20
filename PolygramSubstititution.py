@@ -39,7 +39,7 @@ for line in lines:
     forwardDict[t] = c
     backwordDict[c] = t
 
-text = "ABCDEFABCSD"
+text = "ABCSDKTYR123XZ"
 cipher = encryption(text, 3, forwardDict)
 decryptedText = decryption(cipher, 3, backwordDict)
 print("Original Text : ", text)
