@@ -10,6 +10,9 @@ def encrypt(text,s):
             result += char
 
     return result
+
+def decrypt(text, s):
+    return encrypt(text, 26-s)
  
 
 
@@ -19,7 +22,7 @@ cipher = encrypt(text, s)
 print ("Text  : " + text)
 print ("Shift : " + str(s))
 print ("Cipher: " + cipher)
-print ("Decrypted Text: " + encrypt(cipher,s=26-s))
+print ("Decrypted Text: " + decrypt(cipher,s))
 
-if(text==encrypt(cipher,s=26-s)):
+if(text==decrypt(cipher,s)):
     print(" ............... this works .........")

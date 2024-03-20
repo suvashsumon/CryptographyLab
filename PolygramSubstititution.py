@@ -42,5 +42,6 @@ for line in lines:
 text = "ABCDEFABCSD"
 cipher = encryption(text, 3, forwardDict)
 decryptedText = decryption(cipher, 3, backwordDict)
-print(cipher)
-print(decryptedText)
+print("Original Text : ", text)
+print("Cipher : ",cipher)
+print("Decrypted text : ", decryptedText)
