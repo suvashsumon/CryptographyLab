@@ -1,6 +1,16 @@
+def bigmod(base, power, mod):
+	if power==1:
+		return base
+	sq = (base*base)%mod
+	if power%2==0:
+		return bigmod(sq, power//2, mod)
+	else:
+		return (bigmod(sq, power//2, mod)*base)%mod
+
 def encryptblock(block, key, mod):
 	block = int(block)
-	encrypted_block = (block**key)%mod
+	#encrypted_block = (block**key)%mod
+	encrypted_block = bigmod(block, key, mod)
 	block_cipher = str(encrypted_block)
 	return block_cipher
 
